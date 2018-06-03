@@ -1,0 +1,8 @@
+const C = {
+    ADD_TRACK: 'ADD_TRACK',
+    REMOVE_TRACK: 'REMOVE_TRACK',
+    REMOVE_ARTICLE: 'REMOVE_ARTICLE'
+}
+
+
+export default C
