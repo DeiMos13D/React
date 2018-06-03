@@ -13,7 +13,6 @@ class ArticleList extends Component {
 
     getArticle = ({match}) => {
         const {id} = match.params
-        console.log(match)
         return <Article id={id}  key={id}/>
     }
 
