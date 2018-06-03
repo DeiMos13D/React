@@ -3,13 +3,13 @@ import ArticleList from './ArticleList'
 import UserForm from './UserForm'
 import Calendar from './Calendar'
 import './calendar.css'
-import { HashRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 
 class App extends Component {
     render() {
         return(
-            <HashRouter>
+            <Router>
                 <div>
                     <ul>
                         <li><Link to={'/calendar'}>Calendar</Link></li>
@@ -21,7 +21,7 @@ class App extends Component {
                         <Route path={'/articles'} component = { ArticleList } />
                     </div>
                 </div>
-            </HashRouter>
+            </Router>
         )
     }
 }
