@@ -3,7 +3,7 @@ import ArticleList from './ArticleList'
 import UserForm from './UserForm'
 import Calendar from './Calendar'
 import './calendar.css'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
 
 
 class App extends Component {
