@@ -3,7 +3,8 @@ import reducer from '../reducer'
 // import {commentIDGenerator} from '../middlewares/commentIDGenerator'
 import thunk from 'redux-thunk'
 import { fromJS } from 'immutable'
-
+import { routerMiddleware } from 'react-router-redux'
+import history from '../../history'
 
 const composeEnhancers =
     typeof window === 'object' &&
@@ -11,7 +12,7 @@ const composeEnhancers =
         window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
         }) : compose;
 
-const enhancer = composeEnhancers(applyMiddleware( thunk /*, commentIDGenerator*/))
+const enhancer = composeEnhancers(applyMiddleware( thunk, routerMiddleware(history) /*, commentIDGenerator*/))
 
 let state
 if(localStorage['redux-store']){
