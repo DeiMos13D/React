@@ -1,4 +1,5 @@
 import {v4} from 'uuid'
+import { push } from 'react-router-redux'
 
 export function addTrack(trackName) {
     return {
@@ -39,7 +40,7 @@ export function addComment (userName, comment, article_id) {
             },
             article_id: article_id
         })
-
+        dispatch(push('/articles/new'))
         localStorage['redux-store'] = JSON.stringify(getState())
     }
 }

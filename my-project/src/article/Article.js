@@ -2,14 +2,18 @@ import React, {Fragment, PureComponent} from 'react'
 import CommentsList from './CommentsList'
 import {connect} from 'react-redux'
 import {removeArticle} from "./AC";
-
+import PropTypes from 'prop-types'
 
 class Article extends PureComponent {
 
     state = {
         isOpen: false
     }
-
+//**************************Take in context // ../src/App.js \\
+    static contextTypes = {
+        user: PropTypes.object
+    }
+//*****************************************
     toggleOpen = () => {
         this.setState({isOpen: !this.state.isOpen})
     }
@@ -21,6 +25,7 @@ class Article extends PureComponent {
 
 
     getBody = (article) => {
+        console.log(this.context.user)
         if(!this.state.isOpen) return null
         return  <Fragment>
             <section> { article.text } </section>

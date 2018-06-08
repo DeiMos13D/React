@@ -5,7 +5,7 @@ import Calendar from './Calendar'
 import NewArticleForm from './NewArticleForm'
 import NotFound from './NotFound'
 import './calendar.css'
-import {BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom'
+import {Route, NavLink, Switch} from 'react-router-dom'
 
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
 
     render() {
         return(
-            <Router>
+
                 <div>
                     <ul>
                         <li><NavLink activeStyle = {{color: 'red'}} to={'/calendar'} >Calendar</NavLink></li>
@@ -35,7 +35,7 @@ class App extends Component {
                      </Switch>
                     </div>
                 </div>
-            </Router>
+
         )
     }
 }

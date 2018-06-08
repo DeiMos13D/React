@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { /*Router,*/ Route, NavLink, Redirect, Switch } from 'react-router-dom'
-import { ConnectedRouter } from 'react-router-redux'
+// import { ConnectedRouter } from 'react-router-redux'
 import About from './About'
 import Events from './Events'
 import Products from './Products'
 import ContactUs from './ContactUs'
 import NotFound from '../article/NotFound'
 import BangBang from './BangBang'
-import history from '../history'
+
 
 class MainMenu extends Component {
     bangBangOne = () => {
@@ -23,7 +23,7 @@ class MainMenu extends Component {
         const id = 'name'
         const page = 'gang'
         return (
-            <ConnectedRouter history={history}>
+
                 <div>
                     <ul style = {{fontSize: '30px'}}>
                         <li><NavLink activeStyle = {{ color: 'red' }} to = '/about'>[About]</NavLink></li>
@@ -48,7 +48,7 @@ class MainMenu extends Component {
                         </Switch>
                     </div>
                 </div>
-            </ConnectedRouter>
+
         )
     }
 }
